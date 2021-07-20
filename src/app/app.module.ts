@@ -7,7 +7,6 @@ import { ShoppingListComponentComponent } from './shopping-list-component/shoppi
 import { RecipeBookComponentComponent } from './recipe-book-component/recipe-book-component.component';
 import { ShoppingListEditComponentComponent } from './shopping-list-edit-component/shopping-list-edit-component.component';
 import { RecipeListComponentComponent } from './recipe-list-component/recipe-list-component.component';
-import { IngredientComponentComponent } from './ingredient-component/ingredient-component.component';
 import { RecipeItemComponentComponent } from './recipe-item-component/recipe-item-component.component';
 import { RecipeDetailComponentComponent } from './recipe-detail-component/recipe-detail-component.component';
 
@@ -19,7 +18,6 @@ import { RecipeDetailComponentComponent } from './recipe-detail-component/recipe
     RecipeBookComponentComponent,
     ShoppingListEditComponentComponent,
     RecipeListComponentComponent,
-    IngredientComponentComponent,
     RecipeItemComponentComponent,
     RecipeDetailComponentComponent
   ],

@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { ShoppingListComponentComponent } from './shopping-list-component/shopping-list-component.component';
+import { RecipeBookComponentComponent } from './recipe-book-component/recipe-book-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponentComponent,
-    ShoppingListComponentComponent
+    ShoppingListComponentComponent,
+    RecipeBookComponentComponent
   ],
   imports: [
     BrowserModule

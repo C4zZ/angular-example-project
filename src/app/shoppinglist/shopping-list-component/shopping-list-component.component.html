@@ -1,2 +1,7 @@
 <p>shopping-list-component works!</p>
 <app-shopping-list-edit-component></app-shopping-list-edit-component>
+<div *ngFor="let ingredient of ingredients">
+  <p>{{ ingredient.name }}</p>
+  <p>{{ ingredient.details }}</p>
+  <p>{{ ingredient.amount }}</p>
+</div>

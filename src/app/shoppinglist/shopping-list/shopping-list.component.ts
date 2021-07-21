@@ -3,10 +3,10 @@ import {Ingredient} from "../Ingredient";
 
 @Component({
   selector: 'app-shopping-list-component',
-  templateUrl: './shopping-list-component.component.html',
-  styleUrls: ['./shopping-list-component.component.css']
+  templateUrl: './shopping-list.component.html',
+  styleUrls: ['./shopping-list.component.css']
 })
-export class ShoppingListComponentComponent implements OnInit {
+export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[];
 
   constructor() {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Recipe} from "../Recipe";
+import {Recipe} from "../recipe";
 
 @Component({
   selector: 'app-recipe-list-component',
@@ -16,24 +16,14 @@ export class RecipeListComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getRecipies(): Recipe[] {
-    return [
-      new Recipe("making bread", "bread!", [
-        "the",
-        "steps",
-        "for",
-        "making",
-        "bread"
-      ]),
-      new Recipe("making apple pie", "even more yummy!", [
-        "the",
-        "steps",
-        "for",
-        "making",
-        "apple",
-        "pie"
-      ])
-    ]
+  getRecipies(){
+    let recipies = [];
+    recipies.push(
+      new Recipe("applepie", "yummy", "applepieURL"),
+      new Recipe("bread", "loaf", "breadURL")
+    );
+    return recipies;
   }
+
 }
 

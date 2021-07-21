@@ -3,8 +3,6 @@
 <!-- relationship between component recipe-item-component, recipe-detail-component and the classes recipe and Ingredient unclear at this point -->
 <div *ngFor="let recipe of recipies">
   <p>{{ recipe.name }}</p>
-  <p>{{ recipe.details }}</p>
-  <div *ngFor="let step of recipe.steps">
-    {{ step }}
-  </div>
+  <p>{{ recipe.description }}</p>
+  <p>{{ recipe.imagePath }}</p>
 </div>

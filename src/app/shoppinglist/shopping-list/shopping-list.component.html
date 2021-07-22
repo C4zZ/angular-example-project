@@ -1,7 +1,9 @@
-<p>shopping-list-component works!</p>
-<app-shopping-edit></app-shopping-edit>
-<div *ngFor="let ingredient of ingredients">
-  <p>{{ ingredient.name }}</p>
-  <p>{{ ingredient.details }}</p>
-  <p>{{ ingredient.amount }}</p>
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor: pointer"></a>
+    </ul>
+  </div>
 </div>

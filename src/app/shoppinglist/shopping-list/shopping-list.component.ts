@@ -12,8 +12,8 @@ export class ShoppingListComponent implements OnInit {
   constructor() {
     this.ingredients = [];
     this.ingredients.push(
-      new Ingredient("apple", 2),
-      new Ingredient("bread", 1)
+      new Ingredient("Apples", 2),
+      new Ingredient("Tomatoes", 1)
     )
   }
 

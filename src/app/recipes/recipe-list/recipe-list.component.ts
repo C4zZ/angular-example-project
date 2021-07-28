@@ -28,8 +28,8 @@ export class RecipeListComponent implements OnInit {
     return recipies;
   }
 
-  onShowRecipeDetails(recipeInArray: number){
-    this.recipeSelected.emit(this.recipes[recipeInArray]);
+  onShowRecipeDetails(recipe: Recipe){
+    this.recipeSelected.emit(recipe);
   }
 }
 

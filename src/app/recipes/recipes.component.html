@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <app-recipe-list (recipeClicked)="viewRecipeDetails($event)"></app-recipe-list>
+      <app-recipe-list (recipeSelected)="viewRecipeDetails($event)"></app-recipe-list>
     </div>
     <div class="col-md-7">
       <app-recipe-detail *ngIf="recipeToShowInDetailedView" [recipe]="recipeToShowInDetailedView"></app-recipe-detail>

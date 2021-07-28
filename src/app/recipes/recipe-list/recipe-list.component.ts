@@ -9,7 +9,7 @@ import {Recipe} from "./recipe-item/recipe";
 })
 export class RecipeListComponent implements OnInit {
   @Output()
-  recipeClicked = new EventEmitter<Recipe>();
+  recipeSelected = new EventEmitter<Recipe>();
   recipes: Recipe[];
 
   constructor() {
@@ -28,10 +28,8 @@ export class RecipeListComponent implements OnInit {
     return recipies;
   }
 
-  onShowDetails(positionInRecipesArray: number){
-    let recipeToShow = this.recipes[positionInRecipesArray];
-    this.recipeClicked.emit(recipeToShow);
+  onShowRecipeDetails(recipeInArray: number){
+    this.recipeSelected.emit(this.recipes[recipeInArray]);
   }
-
 }
 

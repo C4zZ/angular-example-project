@@ -4,7 +4,10 @@
       <app-recipe-list (recipeSelected)="viewRecipeDetails($event)"></app-recipe-list>
     </div>
     <div class="col-md-7">
-      <app-recipe-detail *ngIf="recipeToShowInDetailedView" [recipe]="recipeToShowInDetailedView"></app-recipe-detail>
+      <app-recipe-detail *ngIf="recipeToShowInDetailedView; else infoText" [recipe]="recipeToShowInDetailedView"></app-recipe-detail>
+      <ng-template #infoText>
+        <p>Please select a Recipe!</p>
+      </ng-template>
     </div>
   </div>
 </div>

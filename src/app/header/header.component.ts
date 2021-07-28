@@ -14,12 +14,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onToggleRecipiesView(){
-    this.toggleView.emit('recipies');
+  onToggleRecepies(){
+    this.toggleView.emit("recepies");
   }
 
-  onToggleShoppingListView(){
-    this.toggleView.emit('shoppingList');
+  onToggleShoppingList(){
+    this.toggleView.emit("shoppingList");
   }
 
 }

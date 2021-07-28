@@ -2,8 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes [class.collapse]="isRecipiesCollapsed"></app-recipes>
-      <app-shopping-list [class.collapse]="isShoppingListCollapsed"></app-shopping-list>
+      <app-recipes *ngIf="showRecepies"></app-recipes>
+      <app-shopping-list *ngIf="showShoppingList"></app-shopping-list>
     </div>
   </div>
 </div>

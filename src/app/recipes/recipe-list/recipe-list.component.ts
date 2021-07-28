@@ -13,7 +13,7 @@ export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
 
   constructor() {
-    this.recipes = this.getRecipies()
+    this.recipes = this.getRecipies();
   }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class RecipeListComponent implements OnInit {
 
   onShowDetails(positionInRecipesArray: number){
     let recipeToShow = this.recipes[positionInRecipesArray];
-    this.recipeClicked.emit(recipeToShow)
+    this.recipeClicked.emit(recipeToShow);
   }
 
 }

@@ -14,8 +14,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onToggleView(viewName: string){
-    this.toggleView.emit(viewName);
+  onToggleRecipiesView(){
+    this.toggleView.emit('recipies');
+  }
+
+  onToggleShoppingListView(){
+    this.toggleView.emit('shoppingList');
   }
 
 }

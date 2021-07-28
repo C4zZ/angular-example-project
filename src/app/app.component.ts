@@ -8,15 +8,15 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 export class AppComponent {
   title = 'angular-example-project';
   showShoppingList = true;
-  showRecepies = false;
+  showrecipes = false;
 
   toggleView(viewName: string){
-    if (viewName == "recepies"){
-      this.showRecepies = true;
+    if (viewName == "recipes"){
+      this.showrecipes = true;
       this.showShoppingList = false;
     } else if (viewName == "shoppingList"){
       this.showShoppingList = true;
-      this.showRecepies = false;
+      this.showrecipes = false;
     }
   }
 

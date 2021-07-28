@@ -7,10 +7,10 @@ import {Recipe} from "./recipe-item/recipe";
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipies: Recipe[];
+  recipes: Recipe[];
 
   constructor() {
-    this.recipies = this.getRecipies()
+    this.recipes = this.getRecipies()
   }
 
   ngOnInit(): void {

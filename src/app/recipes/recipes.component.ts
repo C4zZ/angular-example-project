@@ -15,7 +15,6 @@ export class RecipesComponent implements OnInit {
   }
 
   viewRecipeDetails(recipe: Recipe){
-    console.log("TEST");
     this.recipeToShowInDetailedView = recipe;
   }
 

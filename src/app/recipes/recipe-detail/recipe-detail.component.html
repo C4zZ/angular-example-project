@@ -1,11 +1,13 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+    <img src="{{ recipe.imagePath }}" alt="" class="img-responsive" *ngIf="recipe; else elseBlockImage">
+    <p #elseBlockImage>Could not load image of recipe</p>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>Recipe Name</h1>
+    <h1 *ngIf="recipe; else elseBlockName">{{ recipe.name }}</h1>
+    <ng-template #elseBlockName><h1>Could not load name of recipe</h1></ng-template>
   </div>
 </div>
 <div class="row">
@@ -22,7 +24,8 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Description
+    <p *ngIf="recipe; else elseBlockDescription">{{ recipe.description }}</p>
+    <ng-template #elseBlockDescription><p>Could not load description of recipe</p></ng-template>
   </div>
 </div>
 <div class="row">

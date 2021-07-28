@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output()
+  toggleView = new EventEmitter<string>();
   collapsed = true;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onToggleView(viewName: string){
+    this.toggleView.emit(viewName);
   }
 
 }

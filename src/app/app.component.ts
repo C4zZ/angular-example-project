@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-example-project';
+
+  toggleView(viewName: string){
+    console.log(viewName + " angesprochen!");
+  }
+
 }

@@ -7,16 +7,28 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-example-project';
-  @ViewChild('shoppingListView')
-  shoppingListView: ElementRef;
-  @ViewChild('recepiesView', {read: ElementRef})
-  recepiesViewElement: ElementRef;
+  isRecipiesCollapsed = false;
+  isShoppingListCollapsed = true
 
   toggleView(viewName: string) {
     if(viewName === 'recipies') {
-      console.log('RECIPIES');
+      this.toggleRecipiesView();
     } else if (viewName === 'shoppingList') {
-      console.log('SHOPPINGLIST');
+      this.toggleShoppingListView();
+    }
+  }
+
+  private toggleRecipiesView(){
+    if(this.isRecipiesCollapsed){
+      this.isRecipiesCollapsed = false;
+      this.isShoppingListCollapsed = true;
+    }
+  }
+
+  private toggleShoppingListView(){
+    if(this.isShoppingListCollapsed){
+      this.isShoppingListCollapsed = false;
+      this.isRecipiesCollapsed = true;
     }
   }
 

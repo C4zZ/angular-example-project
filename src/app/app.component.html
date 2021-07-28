@@ -2,8 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes #recepiesView></app-recipes>
-      <app-shopping-list #shoppingListView></app-shopping-list>
+      <app-recipes [class.collapse]="isRecipiesCollapsed"></app-recipes>
+      <app-shopping-list [class.collapse]="isShoppingListCollapsed"></app-shopping-list>
     </div>
   </div>
 </div>

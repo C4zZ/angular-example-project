@@ -1,3 +1,4 @@
+import { EventEmitter } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import {Recipe} from "./recipe-item/recipe";
 
@@ -7,6 +8,7 @@ import {Recipe} from "./recipe-item/recipe";
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  recipeClicked = new EventEmitter<Recipe>();
   recipes: Recipe[];
 
   constructor() {
@@ -23,6 +25,11 @@ export class RecipeListComponent implements OnInit {
       new Recipe("bread", "loaf", "https://upload.wikimedia.org/wikipedia/commons/3/33/Fresh_made_bread_05.jpg")
     );
     return recipies;
+  }
+
+  onShowDetails(positionInRecipesArray: number){
+    let recipeToShow = this.recipes[positionInRecipesArray];
+    this.recipeClicked.emit(recipeToShow)
   }
 
 }

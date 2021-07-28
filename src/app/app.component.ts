@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-example-project';
+  showShoppingList = true;
+  showRecepies = false;
+
+  toggleView(viewName: string){
+    if (viewName == "recepies"){
+      this.showRecepies = true;
+      this.showShoppingList = false;
+    } else if (viewName == "shoppingList"){
+      this.showShoppingList = true;
+      this.showRecepies = false;
+    }
+  }
+
+
 }

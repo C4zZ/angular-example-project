@@ -1,9 +1,11 @@
-import {Directive, ElementRef, HostListener, OnInit, Renderer2} from "@angular/core";
+import {Directive, ElementRef, HostBinding, HostListener, OnInit, Renderer2} from "@angular/core";
 
 @Directive({
   selector: '[appDropdown]'
 })
 export class DropdownDirective implements OnInit{
+
+  @HostBinding('class.open')
   private isDropdownOpen: boolean;
 
   constructor(
@@ -17,13 +19,7 @@ export class DropdownDirective implements OnInit{
 
   @HostListener('click')
   public toggleDropdown(){
-    if (this.isDropdownOpen) {
-      this.isDropdownOpen = false;
-      this.renderer.removeClass(this.elementRef.nativeElement, 'open');
-    } else {
-      this.isDropdownOpen = true;
-      this.renderer.addClass(this.elementRef.nativeElement, 'open');
-    }
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
 
 }

@@ -17,9 +17,8 @@ export class DropdownDirective implements OnInit{
     this.isDropdownOpen = false;
   }
 
-  @HostListener('click')
-  public toggleDropdown(){
-    this.isDropdownOpen = !this.isDropdownOpen;
+  @HostListener('document:click', ['$event']) toggleOpen(event: Event) {
+    this.isDropdownOpen = this.elementRef.nativeElement.contains(event.target) ? !this.isDropdownOpen : false;
   }
 
 }
